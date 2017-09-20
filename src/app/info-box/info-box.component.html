@@ -1,0 +1,8 @@
+
+  <button 
+    (click)="isHidden=!isHidden"
+  ><span *ngIf="!isHidden">verstecken</span><span *ngIf="isHidden">anzeigen</span></button>
+
+  <div [hidden]="isHidden">ich</div>
+  
+
