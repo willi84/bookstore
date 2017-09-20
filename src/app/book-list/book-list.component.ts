@@ -1,8 +1,7 @@
-import { BookDataService } from './../shared/book-data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  providers: [BookDataService],
+  
   selector: 'book-list',
   templateUrl: './book-list.component.html',
   styleUrls: ['./book-list.component.css']
