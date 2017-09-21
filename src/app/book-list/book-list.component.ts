@@ -1,4 +1,7 @@
+import { Observable } from 'rxjs/Observable';
 import { Component, OnInit } from '@angular/core';
+import { BookDataService } from './../shared/book-data.service';
+
 
 @Component({
   
@@ -10,7 +13,8 @@ export class BookListComponent implements OnInit {
 
   books: Array<any> = [];
   constructor(public bookData: BookDataService) { 
-    this.books = bookData.getBooks();
+    this.bookData.getBooks()
+      .subscribe(books => this.books=books)
   }
 
   ngOnInit() {
