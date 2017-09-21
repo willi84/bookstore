@@ -13,6 +13,7 @@ export class BookListComponent implements OnInit {
 
   books: Array<any> = [];
   constructor(public bookData: BookDataService) { 
+    
     this.bookData.getBooks()
       .subscribe(books => this.books=books)
   }

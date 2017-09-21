@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { BookDataService } from './shared/book-data.service';
-
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { InfoBoxComponent } from './info-box/info-box.component';
@@ -19,7 +19,8 @@ import { BookListComponent } from './book-list/book-list.component';
     BookListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [BookDataService],
   bootstrap: [AppComponent]
