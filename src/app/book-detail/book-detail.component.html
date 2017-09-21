@@ -1,7 +1,9 @@
-<div class="component">
+<h2>book details</h2>
+<a [routerLink]="['/books']">back to list</a>
+<div class="component" *ngIf="book">
     <ul class="align">
       <!-- Book 1 -->
-      <li *ngFor="let book of books"  [routerLink]="['/books', book.isbn]">
+      <li>
         <figure class='book'>        
           <!-- Front -->        
           <ul class='hardcover_front'>
@@ -40,3 +42,4 @@
       
     </ul>  
   </div>
+  
