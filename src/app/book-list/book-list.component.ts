@@ -12,13 +12,17 @@ import { BookDataService } from './../shared/book-data.service';
 export class BookListComponent implements OnInit {
 
   books: Array<any> = [];
+  subscription: any; 
   constructor(public bookData: BookDataService) { 
     
-    this.bookData.getBooks()
+  }
+  
+  ngOnInit() {
+    this.subscription = this.bookData.getBooks()
       .subscribe(books => this.books=books)
   }
-
-  ngOnInit() {
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
 }
