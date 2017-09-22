@@ -6,7 +6,7 @@ import { BookDetailComponent } from './book-detail/book-detail.component';
 
 export const bookRoutes: Routes = [
   {
-  path: 'books',
+  path: '',
   component: BookComponent,
   children: [{
     path: '',
