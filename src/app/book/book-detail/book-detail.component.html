@@ -36,6 +36,7 @@
             <h1>{{book.title}}</h1>
             <span>{{book.author}}</span>
             <p>{{book.subtitle}}</p>
+            <p><a [routerLink]="['/books', book.isbn, 'edit']">[Edit]</a></p>
           </figcaption>
         </figure>
       </li>  

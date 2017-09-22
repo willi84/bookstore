@@ -8,12 +8,12 @@ import { CommonModule } from '@angular/common';
 import { BookRoutingModule } from './book-routing.module';
 import { BookComponent } from './book.component';
 import { BookEditComponent } from './book-edit/book-edit.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     CommonModule,
     BookRoutingModule,
-        
+    FormsModule
   ],
   providers: [BookDataService, ConfirmCandeactivateGuard],
   declarations: [BookComponent,BookDetailComponent,

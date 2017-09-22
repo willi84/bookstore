@@ -1,3 +1,4 @@
+import { BookEditComponent } from './book-edit/book-edit.component';
 import { ConfirmCandeactivateGuard } from './shared/confirm-candeactivate.guard';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -15,7 +16,11 @@ export const bookRoutes: Routes = [
     path: ':isbn',
     component: BookDetailComponent,
     canDeactivate: [ConfirmCandeactivateGuard]
-    }]
+    },
+    {
+      path: ':isbn/edit',
+      component: BookEditComponent
+      }]
   }];
 
 @NgModule({

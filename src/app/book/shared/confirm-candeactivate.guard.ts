@@ -11,6 +11,7 @@ export class ConfirmCandeactivateGuard implements CanDeactivate<BookDetailCompon
   //  state: RouterStateSnapshot
   ): Observable<boolean> | Promise<boolean> | boolean 
     {
-    return confirm('willst du das wirklich?');
+    //return confirm('willst du das wirklich?');
+    return true;
   }
 }
