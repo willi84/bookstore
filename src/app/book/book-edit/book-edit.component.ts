@@ -26,4 +26,8 @@ export class BookEditComponent implements OnInit {
     this.innerSubscription.unsubscribe();
   }
 
+  save(data){
+    console.log(data);
+  }
+
 }
