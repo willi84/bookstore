@@ -1,4 +1,5 @@
 import { BookEditComponent } from './book-edit/book-edit.component';
+import { BookNewComponent } from './book-new/book-new.component';
 import { ConfirmCandeactivateGuard } from './shared/confirm-candeactivate.guard';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -12,7 +13,12 @@ export const bookRoutes: Routes = [
   children: [{
     path: '',
     component: BookListComponent
-  }, {
+  },
+  {
+    path: 'new',
+    component: BookNewComponent
+    }, 
+  {
     path: ':isbn',
     component: BookDetailComponent,
     canDeactivate: [ConfirmCandeactivateGuard]
@@ -20,7 +26,9 @@ export const bookRoutes: Routes = [
     {
       path: ':isbn/edit',
       component: BookEditComponent
-      }]
+      }
+      
+    ]
   }];
 
 @NgModule({
