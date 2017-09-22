@@ -1,9 +1,9 @@
+import { ConfirmCandeactivateGuard } from './shared/confirm-candeactivate.guard';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BookComponent } from './book.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
-
 export const bookRoutes: Routes = [
   {
   path: '',
@@ -11,9 +11,10 @@ export const bookRoutes: Routes = [
   children: [{
     path: '',
     component: BookListComponent
-    }, {
+  }, {
     path: ':isbn',
-    component: BookDetailComponent
+    component: BookDetailComponent,
+    canDeactivate: [ConfirmCandeactivateGuard]
     }]
   }];
 

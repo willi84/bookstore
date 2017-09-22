@@ -10,6 +10,7 @@ import { TitleBoxComponent } from './title-box/title-box.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { routing  } from './app.routing';
+import { BookEditComponent } from './book/book-edit/book-edit.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { routing  } from './app.routing';
     InfoBoxComponent,
     MousePositionComponent,
     TitleBoxComponent,
+    BookEditComponent,
   ],
   imports: [
     BrowserModule,
